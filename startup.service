@@ -1,0 +1,16 @@
+# Copy to /lib/systemd/system
+# Then run:
+#  sudo systemctl daemon-reload
+#  sudo systemctl enable startup.service
+[Unit]
+Description=Roslaunch the ros modules
+
+[Service]
+ExecStart="/home/ubuntu/RobotOSHelpers/launch.sh"
+KillMode=process
+User=ubuntu
+Type=forking
+
+[Install]
+WantedBy=multi-user.target
+

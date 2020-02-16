@@ -1,0 +1,25 @@
+.RosNodeHealth .MuiTableCell-root {
+  font-size: small;
+  padding: 0 1px;
+}
+
+.RosNodeHealth .MuiTable-root {
+  width: 98%;
+  margin: 3px;
+}
+
+.RosNodeHealth .crashed {
+  background: lightcoral;
+}
+
+.RosNodeHealth .notconnected .MuiTableCell-root {
+  color: lightcoral;
+}
+
+.tablerow .processIconButton {
+  display: none;
+}
+
+.tablerow:hover .processIconButton {
+  display: inline-block;
+}

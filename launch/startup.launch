@@ -1,0 +1,20 @@
+<!-- This is an example ros launch file. Modify to fit your ros nodes.
+     Some documentation on ros launch files:
+
+      http://www.clearpathrobotics.com/assets/guides/ros/Launch%20Files.html
+
+      -->
+
+<launch>
+  <!-- Joystick Input Node -->
+  <include file="$(find rover)/launch/joy.launch"/>
+  <!-- Simple Drive Node -->
+  <include file="$(find rover)/launch/simple_drive.launch"/>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+  <!-- camera -->
+  <node name="web_video_server" pkg="web_video_server" type="web_video_server" />
+  <node name="cv_camera" pkg="cv_camera" type="cv_camera_node">
+    <param name="rate" type="double" value="5" />
+  </node>
+  <node name="power_service" pkg="rover" type="power_service" />
+</launch>
