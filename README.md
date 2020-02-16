@@ -26,3 +26,6 @@ I like to add this information to whatever GUI I'm creating for my robot.   For 
 
 Note that I show a start/stop button when hovering over a node process, to let me start and stop the node.
 
+See the `example_react_gui` for the React javascript code to show the process information and show a button to start and stop the process.
+
+
